@@ -2,7 +2,7 @@
 
 
 ## 🚀 Live Interactive Demo
-🔗 **[Click Here to Launch the Live Dashboard](YOUR_STREAMLIT_CLOUD_LINK_HERE)**
+🔗 **[Click Here to Launch the Live Dashboard]((https://e5qwygmrszblonr4ctvqlt.streamlit.app/))**
 
 ---
 
