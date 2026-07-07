@@ -1,6 +1,5 @@
-# 🔍 Team [Your Team Name] | Smart Credit Card Fraud Investigation Dashboard
+# 🔍 Team [Hungry Ninjas] | Smart Credit Card Fraud Investigation Dashboard
 
-Submitted for [Hackathon Name 2026]
 
 ## 🚀 Live Interactive Demo
 🔗 **[Click Here to Launch the Live Dashboard](YOUR_STREAMLIT_CLOUD_LINK_HERE)**
