@@ -5,6 +5,8 @@ Submitted for the Hackathon Demo
 ## 🚀 Live Interactive Demo
 🔗 **[Launch Our Live Dashboard UI](https://e5qwygmrszblonr4ctvqlt.streamlit.app/)**
 
+📊 **[Dataset Source: Kaggle Credit Card Fraud Detection](https://www.kaggle.com/datasets/miadul/credit-card-fraud-detection-dataset)**
+
 ---
 
 ## 📌 What We Built
