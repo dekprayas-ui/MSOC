@@ -1,49 +1,31 @@
-# 🔍 Smart Credit Card Fraud Investigation Dashboard
+# 🔍 Team [Your Team Name] | Smart Credit Card Fraud Investigation Dashboard
 
-An end-to-end machine learning system designed to detect fraudulent credit card transactions and provide transparent, explainable risk scores for financial investigators. 
+Submitted for [Hackathon Name 2026]
 
-Instead of treating the machine learning model as a "black box," this project pairs a highly optimized **XGBoost** classification pipeline with a live **Streamlit dashboard** that uses **SHAP** values to break down exactly *why* any given transaction was flagged.
-
-## 🚀 Live Demo
-🔗 **[View the Live Interactive Dashboard Here](YOUR_STREAMLIT_CLOUD_LINK_HERE)**
+## 🚀 Live Interactive Demo
+🔗 **[Click Here to Launch the Live Dashboard](YOUR_STREAMLIT_CLOUD_LINK_HERE)**
 
 ---
 
-## 🛠️ The Tech Stack
-* **Data Processing & Analytics:** Python, Pandas, NumPy
-* **Machine Learning:** XGBoost, Scikit-Learn (CalibratedClassifierCV)
-* **Explainable AI (XAI):** SHAP (SHapley Additive exPlanations)
-* **Frontend Dashboard:** Streamlit, Matplotlib
+## 💡 The Problem
+Financial institutions lose billions annually to credit card fraud. Traditional AI detection models operate as "black boxes"—they flag transactions but leave human investigators guessing *why* a charge was blocked. This slows down investigations and hurts user experience through false positives.
+
+## 🛠️ Our Solution
+We built an **End-to-End Explainable AI (XAI) Fraud Detection System**. 
+1. **The Core Engine:** Uses a calibrated **XGBoost Classifier** optimized for highly imbalanced data to generate reliable, precise risk percentages (0-100%).
+2. **The Transparency Layer:** Integrates **SHAP (SHapley Additive exPlanations)** to break open the black box. 
+3. **The Investigator Dashboard:** A live **Streamlit** dashboard that automatically prioritizes high-risk threats and provides instant, localized visual breakdowns of the top 3 risk drivers for any selected transaction.
 
 ---
 
-## 💡 System Architecture & Core Features
-
-### 1. The Machine Learning Engine (`train.py`)
-* **Time-Proxy Splitting:** To mimic a realistic production environment, data is sorted chronologically via transaction IDs and split (70/30) without shuffling, completely preventing future data leakage.
-* **Imbalance Management:** Addresses severe fraud class imbalances using calculated dynamic positive instance weighting (`scale_pos_weight`).
-* **Probability Calibration:** Smoothes out raw XGBoost output distortions using Sigmoid calibration, transforming raw outputs into reliable 0-100% risk probabilities.
-* **Optimized Thresholding:** Uses Precision-Recall curves to mathematically isolate the ideal decision threshold—maximizing fraud catch rates (Recall) while minimizing expensive false alarms (Precision).
-
-### 2. The Investigator UI (`app.py`)
-* **Risk-Ranked Feeds:** Automatically bubbles the most critical, high-risk anomalies straight to the top of the investigator's queue.
-* **Custom Drill-Downs:** Allows real-time filtering by minimum risk thresholds, specific merchants, or fraud-only flags.
-* **Per-Transaction Deep Dives:** Selecting a transaction dynamically generates a local SHAP bar chart, showing the top 3 drivers (e.g., location mismatches, high transaction velocity, or unusual hours) behind that specific risk score.
+## 📈 Key Highlights & Tech Achievements
+* **Explainable Risk Scores:** Investigators instantly see precisely why a transaction is flagged (e.g., location mismatch, high transaction velocity, or unusual hours).
+* **Ultra-Low Latency:** The model boasts an inference speed of **~1.2ms**, making it fully viable for real-time production banking systems (well within standard <200ms budgets).
+* **Calibrated Confidence:** Uses probability calibration so that a "80% risk score" mathematically correlates to a true 80% likelihood of fraud.
 
 ---
 
-## 📊 Performance Report Card
-The pipeline automatically logs its performance metrics into `RESULTS.md` upon training. Our current benchmark:
-
-* **PR-AUC:** ~0.87+ (High precision across fraud detection)
-* **Inference Latency:** ~1.2ms (Well within standard production SLAs of <200ms)
-
----
-
-## 🏃‍♂️ How to Run Locally
-
-### 1. Clone the repository and install dependencies
-```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
-pip install -r requirements.txt
+## 🏗️ Built With
+* **Backend & ML Engine:** Python, XGBoost, Scikit-Learn
+* **Explainable AI:** SHAP
+* **Frontend UI:** Streamlit, Matplotlib
