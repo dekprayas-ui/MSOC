@@ -18,22 +18,6 @@ Everything is wrapped up in an interactive **Streamlit dashboard** that allows f
 
 ---
 
-## 🏗️ How the System Flows
-[Raw CSV Data] ──> [train.py Engine] ──> [Model Calibration & Optimizations]
-│
-┌────────────────────────────────────────┴────────────────────────────────────────┐
-▼                                        ▼                                        ▼
-[Model Weight Files (.joblib)]           [Config Metadata (.json)]              [Scored Outputs (.csv)]
-│                                        │                                        │
-└────────────────────────────────────────┼────────────────────────────────────────┘
-▼
-[app.py Streamlit UI]
-│
-▼
-[Live Browser Workspace for Investigators]
-
-
----
 
 ## 📂 What Each File Does
 
